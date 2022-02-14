@@ -17,15 +17,18 @@ app.use(helmet())
 
 // routers
 
-// user -> auth router
+// auth router
 const authRouter = require('./routes/auth.route')
+// user router
+const userRouter = require('./routes/user.route')
 
 
 // api
 
 // auth
 app.use('/api/auth', authRouter)
-
+// user
+app.use('/api', userRouter)
 
 
 

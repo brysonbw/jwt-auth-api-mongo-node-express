@@ -46,7 +46,7 @@ module.exports.loginHandler = async (req, res) => {
               username: user.username                       
             },
             `${process.env.ACCESS_SECRET}`, 
-            { expiresIn: `${process.env.ACCESS_EXPIRE}` }, // 1 min in seconds
+            { expiresIn: `${process.env.ACCESS_EXPIRE}` },
         );
 
         const userInfo = {
